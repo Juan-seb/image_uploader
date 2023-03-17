@@ -1,0 +1,7 @@
+const states = {
+  UPLOAD_IMAGE: 'UPLOAD_IMAGE',
+  UPLOADING_IMAGE: 'UPLOADING_IMAGE',
+  UPLOADED: 'UPLOADED'
+}
+
+export { states }
