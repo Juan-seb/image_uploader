@@ -1,0 +1,6 @@
+.box {
+  background-image: repeating-linear-gradient(0deg, #97bef4, #97bef4 20px, transparent 20px, transparent 32px, #97bef4 32px), repeating-linear-gradient(90deg, #97bef4, #97bef4 20px, transparent 20px, transparent 32px, #97bef4 32px), repeating-linear-gradient(180deg, #97bef4, #97bef4 20px, transparent 20px, transparent 32px, #97bef4 32px), repeating-linear-gradient(270deg, #97bef4, #97bef4 20px, transparent 20px, transparent 32px, #97bef4 32px);
+  background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
