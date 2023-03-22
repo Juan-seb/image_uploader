@@ -1,15 +1,17 @@
-import UploadImage from '../UploadImage'
 import { states } from '../../helpers/states'
-import useUploadImage from '../../hooks/useUploadImage'
 import Loader from '../Loader'
+import PreviewImage from '../PreviewImage'
+import UploadImage from '../UploadImage'
+import useUploadImage from '../../hooks/useUploadImage'
 
 const UploadZone = () => {
   const { condition, urlPreview, setFile } = useUploadImage()
 
   return (
     <>
-      {condition === states.TO_UPLOAD && <UploadImage setFile={setFile} />}
+      {condition === states.UPLOAD_IMAGE && <UploadImage setFile={setFile} />}
       {condition === states.UPLOADING_IMAGE && <Loader />}
+      {condition === states.UPLOADED && <PreviewImage urlPreview={urlPreview} />}
     </>
   )
 }
