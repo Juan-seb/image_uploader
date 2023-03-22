@@ -6,6 +6,7 @@ export default function useUploadImage () {
   const [urlPreview, setUrlPreview] = useState(null)
   const [condition, setCondition] = useState(states.UPLOAD_IMAGE)
 
+  console.log(import.meta.env.VITE_UPLOAD_URL)
   useEffect(() => {
     const sendImage = async () => {
       if (!file) return
