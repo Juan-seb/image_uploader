@@ -18,7 +18,7 @@ const uploadPhoto = async (filePath) => {
   try {
     return await cloud.uploader.upload(filePath)
   } catch (error) {
-    console.log(error)
+    return error
   }
   /* return cloud.uploader.upload(filePath, (error, result) => {
     if (error) return error
