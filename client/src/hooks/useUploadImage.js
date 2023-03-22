@@ -12,10 +12,9 @@ export default function useUploadImage () {
       const formData = new FormData()
 
       formData.append('photo', file)
-      console.log(formData)
 
       try {
-        const res = await fetch('http://localhost:3001/upload', {
+        const res = await fetch(import.meta.env.VITE_UPLOAD_URL, {
           method: 'POST',
           body: formData
         })
@@ -33,5 +32,5 @@ export default function useUploadImage () {
     file && setCondition(states.UPLOADING_IMAGE)
   }, [file])
 
-  return { condition, urlPreview, setFile }
+  return { condition, urlPreview, setFile, setCondition }
 }
